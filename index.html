@@ -62,11 +62,15 @@
                 margin-bottom: 5rem;
             }
             .about-right {
-                padding-left: 20vw;
+                width: 40rem;
+                margin-right: 7rem;
+                max-height: 100vh;
+                right: 0;
                 background: white;
                 background-image: url("images/bg_orange.png");
                 background-position: center center;
                 background-size: cover;
+                background-repeat: no-repeat;
             }
             .name{
                 font-size: 5.5rem;
@@ -139,13 +143,37 @@
                 height: 10rem;
                 background-image: url("images/footer.png");
                 background-size: cover;
+                margin-bottom: 0.01rem;
+            }
+            .hyperlink {
+                position: relative;
+                font-size: 1rem;
+                color: #ddd;
+                text-decoration: none;
+                overflow: hidden;
+            }
+            .hyperlink::before {
+                position: absolute;
+                content: attr(data-content); /* Prints the value of the attribute */
+                top: 0;
+                left: 0;
+                color: #f29420;
+                text-decoration: none;
+                overflow: hidden;
+                transition: width 400ms ease;
+                width: 0;
+                white-space: nowrap;
+            }
+            .hyperlink:hover::before {
+                width: 100%;
             }
         .carousel {
-        background: white;
         margin-top: 5rem;
+        width: 75%;
         }
 
         .carousel-cell {
+        margin-bottom: 2rem;
         width: 70%;
         height: 200px;
         /* flex-box, center image in cell */
@@ -228,11 +256,11 @@
         </style>
     </head>
     <body id="body" class="loading" style="overflow-x: hidden">
-        <div id="intro" class="intro" style="background:white; position: absolute; width: 100%; height: 100%; z-index: 100; overflow: hidden;">
+        <!-- <div id="intro" class="intro" style="background:white; position: absolute; width: 100%; height: 100%; z-index: 100; overflow: hidden;">
             <video width="100%" height="100%" autoplay muted>
                 <source src="images/logo-animacao.mp4" type="video/mp4">
             </video> 
-        </div>
+        </div> -->
         <nav class="sidenav">
             <img src="images/ar_logo.png" alt="logo" style="display: block; width: 65%; margin: 1rem auto">
             <!-- this is not centered as the logo is pushing it down, using negative margin to push it up -->
@@ -246,12 +274,12 @@
             </div>
         </nav>
         <main>
-            <section id="about" style="display: flex; height: 100%">
+            <section id="about" style="display: flex; height: 100%; justify-content: space-between; width: 100vw;">
                 <div style="padding: 3rem 0rem 0rem 3rem;">
                     <h2><u>About</u></h2>
                     <h3 class="name">Ana <br/>Rodrigues</h3>
                     <p class="profession">GRAPHIC UX UI WEB DESIGNER</p>
-                    <p>
+                    <p style="max-width: 40rem">
                         I’m Ana Rodrigues, a newly graduate, looking to get on the comunication field and use all my frustaded criativity, 
                         accumulated knowledge and will to work/criate/develop, throught my student life. My goal is simple, to work in comunication, 
                         branding, publicity, UX and UI design and content criation, through the art of photography or videography. To create is my 
@@ -259,7 +287,7 @@
                     </p>
                     <div style="display: table;">
                         <span class="text-gray" style="display: table-cell; vertical-align: middle; padding-right: 1rem;">
-                            Rua dos Rasos lote 6, 3800-065
+                            Aveiro, Portugal | +351 917161625 | emaildeanarodrigues@gmail.com
                         </span>
                         <div style="display: table-cell">
                             <img class="social-icon" src="images/ig.png" alt="Instagram">
@@ -268,12 +296,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="about-right">
-                    <p style="padding-right: 16vw; padding-top: 3rem">&nbsp;</p>
-                </div>
+                <div class="about-right"></div>
             </section>
             <section id="skills" style="margin: 5rem 0rem 10rem 3rem;">
-                <h2 >Skills</h2>
+                <h2><u>Skills</u></h2>
                 <div style="display: block; margin: auto; width: 40rem; margin-right: 40%;">
                     <img style="padding: 1rem; width: 10rem;" src="images/premiere.png" alt="premiere">
                     <img style="padding: 1rem; width: 10rem;" src="images/lightroom.png" alt="lightroom">
@@ -284,42 +310,36 @@
                 </div>
             </section>
             <section id="works" style="margin: 5rem 0rem 10rem 3rem;">
-                <h2>Works</h2>
+                <h2><u>Works</u></h2>
                 <!-- Flickity HTML init -->
                 <div class="carousel js-flickity">
 
                     <!-- images from unsplash.com -->
                     <div class="carousel-cell">
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" alt="orange tree" />
+                        <img src="images/carousel/1.png" />
                     </div>
                     <div class="carousel-cell">
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg" alt="submerged" />
+                        <img src="images/carousel/2.png" />
                     </div>
                     <div class="carousel-cell">
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg" alt="look-out" />
+                        <img src="images/carousel/3.png" />
                     </div>
                     <div class="carousel-cell">
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" alt="One World Trade" />
+                        <img src="images/carousel/4.png" />
                     </div>
                     <div class="carousel-cell">
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg" alt="drizzle" />
+                        <img src="images/carousel/5.png" />
                     </div>
                     <div class="carousel-cell">
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg" alt="cat nose" />
+                        <img src="images/carousel/6.png" />
                     </div>
                     <div class="carousel-cell">
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/contrail.jpg" alt="contrail" />
-                    </div>
-                    <div class="carousel-cell">
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/golden-hour.jpg" alt="golden hour" />
-                    </div>
-                    <div class="carousel-cell">
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/flight-formation.jpg" alt="flight formation" />
+                        <img src="images/carousel/7.png" />
                     </div>
                 </div>
             </section>
-            <section id="story" style="margin: 5rem 0rem 10rem 3rem;">
-                <h2>Story</h2>
+            <section id="story" style="margin: 5rem 0rem 8rem 3rem;">
+                <h2><u>Story</u></h2>
                 <ul class="timeline">
 
                     <li class="event" title="2014-2017">
@@ -343,6 +363,10 @@
                     </li>
                 </ul>
             </section>
+            <p style="text-align: center; padding-right: 4rem; padding-bottom: 3rem">
+                To find out more, check my 
+                <a class="hyperlink" data-content="Curriculum Vitae" href="cv.pdf">Curriculum Vitae</a>
+            </p>
             <footer></footer>
         </main>
         <script src="https://npmcdn.com/flickity@2/dist/flickity.pkgd.js"></script>

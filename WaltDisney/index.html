@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
+    <!-- JQUERY JS-->
+    <script src="jquery/jquery-3.3.1.min.js"></script>
+    <!-- POPPER JS-->
+    <script src="popper/popper.min.js"></script>
+    <!--BOOTSTRAP CSS-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--BOOTSTRAP JS-->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- FONTAWESOME CSS-->
+    <link rel="stylesheet" href="fontawesome/css/fontawesome-all.min.css">
+    <script src="parallax/parallax.js"></script>
+    <!-- Ficheiros do Animate On Scroll Library-->
+    <link href="aos/aos.css" rel="stylesheet">
+    <script src="aos/aos.js"></script>
+
+    <!--ESTILOS GERAIS-->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <title>Walt Disney</title>
+</head>
+<body>
+
+<header>
+    <video id="videodisney" controls muted autoplay onended="baixo()" width="100%" height="100%">
+        <source src="videos/DisneyIntroFullHD1080p.mp4" type="video/mp4">
+    </video>
+    <div id="animacao"></div>
+</header>
+
+<nav class="navbar navbar-expand-sm sticky-top font-weight-bold">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-nav">
+        <span class="navbar-toggler-icon text-white">
+            <i class="fas fa-bars"></i>
+        </span>
+    </button>
+
+    <!-- BRANDING QUE SERÁ USADO APENAS EM ECRÃS EXTRA SMALL-->
+    <a href="WaltDisney.html" class="navbar-brand d-block d-sm-none text-right">
+        <img class="d-inline d-sm-none" src="imagensparasite/Walt-Disney-logo2.png" height="100">
+    </a>
+
+    <!-- LINKS À DIREITA -->
+    <div class="navbar-collapse collapse dual-nav w-100">
+        <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link text-white text-warning mudala" href="WaltDisney.html"><h6>Home</h6></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white mudala" href="Awards.html"><h6>Awards</h6></a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- BRANDING CENTRADO QUE SERÁ USADO EM ECRÃS SMALLOU SUPERIORES -->
+    <a href="WaltDisney.html" class="navbar-brand mx-auto d-none d-sm-inline text-sm-center">
+        <img class="d-none d-sm-inline" src="imagensparasite/Walt-Disney-logo2.png" height="100">
+    </a>
+
+    <!-- LINKS À DIREITA -->
+    <div class="navbar-collapse collapse dual-nav w-100">
+        <ul class="nav navbar-nav ml-0">
+            <li class="nav-item">
+                <a class="nav-link text-white mudala" href="Characters.html"><h6>Characters</h6></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white mudala href="personality.html"><h6>Personality</h6></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<main>
+
+    <section class="secao2 container-fluid parallax-window2 text-white lead" data-parallax="scroll" data-image-src="fundos/fundo1.jpg">
+        <article class="row justify-content-center">
+            <div class="text-center col-12 col-md-8 pb-5 mb-5"><img class="img-fluid w-100" src="imagensparasite/disney.png"></div>
+        </article>
+
+    </section>
+    <section class="secao2 container-fluid parallax-window text-white lead" data-parallax="scroll" data-image-src="fundos/fundo2.jpg">
+        <article data-aos="fade-bottom" data-aos-duration="800"  class="row">
+            <div class="col-2 col-2 align-self-center">
+                <img class="cronologia img-fluid" src="imagens-sem-fundo-para-website/1901.png">
+            </div>
+            <div class="col-6 col-sm-5 text-right">
+                <img class="img-fluid w-100" src="imagensparasite/walt-disney-as-a-young-child.jpeg">
+                <img class="img-fluid w-100" src="imagensparasite/Walt-Ruth-Disney.png">
+                <img class="img-fluid w-100" src="imagensparasite/031009_Walt_young_feature.jpg">
+            </div>
+            <div class="col-4 img-fluid texto">
+                <p>Born in Chicago in 1901,
+                    <br>Disney developed an <br>early interest in drawing.</p>
+                <br>
+                <p>He took art classes<br> as a boy and got a job<br>
+                    as a commercial illustrator<br> at the age of 18.</p>
+            </div>
+            <div class="col-lg-1"></div>
+        </article>
+    </section>
+
+    <section class="secao2 container-fluid parallax-window text-white lead" data-parallax="scroll" data-image-src="fundos/fundo3.jpg">
+        <article data-aos="fade-bottom" data-aos-duration="800" class="row">
+            <div class="col-1 col-2 align-self-center">
+                <img class="img-fluid" src="imagens-sem-fundo-para-website/1920.png">
+            </div>
+            <div class="col-6 col-sm-5 col-4 text-right">
+                <img class="img-fluid w-100" src="imagensparasite/09cc56ecb494be195d5891673afd177b--disney-theme-disney-s.jpg">
+                <img class="img-fluid w-100" src="imagensparasite/transferir.jpg">
+                <img class="img-fluid w-100" src="imagensparasite/copyofwalt13.jpg">
+            </div>
+            <div class="col-4 texto">
+                <p>He moved to California in the early 1920s and set up the Disney Brothers Studio with his brother Roy.</p>
+                <p>Walt and Roy Disney
+                    establish  The Disney Brothers Studio
+                    in 1923.</p>
+                    <p>With Ub Iwerks,
+                    Walt developed the character
+                    Mickey Mouse in 1928,
+                        his first sucess;</p>
+                    <p>He also provided the voice for
+                    his creation in the early years.</p>
+            </div>
+            <div class="col-lg-1"></div>
+        </article>
+    </section>
+
+    <section class="secao2 container-fluid parallax-window text-white lead" data-parallax="scroll" data-image-src="fundos/fundo4.jpg">
+        <article data-aos="fade-bottom" data-aos-duration="800" class="row">
+            <div class="col-1 col-2 align-self-center">
+                <img class="img-fluid" src="imagens-sem-fundo-para-website/1930.png">
+            </div>
+            <div class="col-6 col-sm-5 text-right">
+                <img class="img-fluid w-100" src="imagensparasite/SnowWhite6.gif">
+                <img class="img-fluid w-100" src="imagensparasite/pinoquio.jpg">
+                <img class="img-fluid w-100" src="imagensparasite/photo20.jpg">
+                <img class="img-fluid w-100" src="imagensparasite/bambi.jpg">
+            </div>
+            <div class="col-4 texto">
+                <p>As the studio grew,
+                    Disney became more adventurous technology wise</p>
+                <p>The results, seen in features such as:</p>
+                <p>Snow White and the Seven Dwarfs (1937);</p>
+                <p> Pinocchio (1940);</p>
+                <p>Dumbo (1941);</p>
+                <p> Bambi (1942);</p>
+                <p>furthered the development
+                    of animated film.</p>
+            </div>
+            <div class="col-lg-1"></div>
+        </article>
+    </section>
+
+    <section class="secao2 container-fluid parallax-window text-white lead" data-parallax="scroll" data-image-src="fundos/fundo5.jpg">
+        <article data-aos="fade-bottom" data-aos-duration="800" class="row">
+            <div class="col-1 col-2 align-self-center">
+                <img class="img-fluid" src="imagens-sem-fundo-para-website/1950.png">
+            </div>
+            <div class="col-6 col-sm-5 col-4 text-right">
+                <img class="img-fluid w-100" src="imagensparasite/foto31.jpg">
+                <img class="img-fluid w-100" src="imagensparasite/fotos32.jpg">
+                <img class="img-fluid w-100 h-25" src="imagensparasite/foto33.jpg">
+                <img class="img-fluid w-100" src="imagensparasite/foto34.jpg">
+            </div>
+            <div class="col-4 texto">
+                <p>To fund the project he diversified
+                    into television programs,
+                    such as Walt Disney's Disneyland
+                    and The Mickey Mouse Club;</p>
+
+                <p>image to the left:</p>
+                <p>Disney First Christmas Special;</p>
+                <p>Disney Christmas Show</p>
+            </div>
+            <div class="col-lg-1"></div>
+        </article>
+    </section>
+
+    <section class="secao2 container-fluid parallax-window text-white lead" data-parallax="scroll" data-image-src="fundos/fundo6.jpg">
+        <article data-aos="fade-bottom" data-aos-duration="800" class="row">
+            <div class="col-1 col-2 align-self-center">
+                <img class="img-fluid" src="imagens-sem-fundo-para-website/1965.png">
+            </div>
+            <div class="col-6 col-sm-5 col-4 text-right">
+                <img class="img-fluid w-100" src="imagensparasite/disneyland101.jpg">
+                <img class="img-fluid w-100" src="imagensparasite/de57415abb9d585b9c1147b65d50b12b.jpg">
+                <img class="img-fluid w-100" src="imagensparasite/96aaeaac063c55e4fd523d6eda08c8bd.jpg">
+                <img class="img-fluid w-100" src="imagensparasite/117.jpg">
+            </div>
+            <div class="col-4 texto">
+                <p>In the 1950s, Disney expanded into the amusement park industry,
+                    and in 1955 he opened Disneyland.
+                    To fund the project he diversified
+                    into television programs,
+                    such as Walt Disney's Disneyland
+                    and The Mickey Mouse Club;</p>
+                <p>
+                    image to the left:
+                    Disney First Christmas Special
+                    Disney Christmas Show</p>
+            </div>
+            <div class="col-lg-1"></div>
+        </article>
+    </section>
+</main>
+
+
+<footer class="pt-5 pb-5">
+    <section class="row fogo justify-content-center p-0 m-0">
+        <div class="col-xs-12 col-md-12 m-0 p-0">
+            <h1 class="hpreto text-white py-3 text-center">"if you can dream it you can do it"</h1>
+        </div>
+    </section>
+
+    <section class="row col-12 justify-content-center">
+        <div class="spana col-4 text-center text-white">Contacts</div>
+        <div class="spana col-4 text-center text-white">@Disney</div>
+        <div class="spana col-4 text-center text-white">Help</div>
+    </section>
+
+    <section class="row col-12"></section>
+</footer>
+</body>
+</html>
+
+<script>
+    AOS.init({
+        offset: 200,
+        duration: 100,
+        easing: 'ease-in-sine',
+        delay: 0,
+    });
+    function baixo (){
+        location.href = "#animacao";
+    }
+</script>
