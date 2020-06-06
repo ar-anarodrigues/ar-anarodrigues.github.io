@@ -1,0 +1,358 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ana Rodrigues</title>
+        <link rel="stylesheet" href="https://npmcdn.com/flickity@2/dist/flickity.css">
+        <style>
+            @font-face {
+            font-family: "NeueMontreal";
+            src: url("fontes/montreal-regular.ttf") format("truetype");
+            font-weight: normal;
+            font-style: normal;
+            }
+            @font-face {
+            font-family: "NeueMontreal";
+            src: url("fontes/montreal-bold.ttf") format("truetype");
+            font-weight: bold;
+            font-style: normal;
+            }
+            html {
+                font-family: NeueMontreal;
+                height: 100%;
+                width: 100%;
+            }
+            body {
+                display: flex;
+                padding: 0;
+                margin: 0;
+                height: 100%;
+                width: 100%;
+            }
+            .sidenav{
+                width: 5rem;
+                box-shadow: 0px 0px 15px #999;
+                height: 100%;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                text-align: center;
+            }
+            .sidenav-items{
+                position: absolute;
+                height: 100%; width:
+                100%; display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: -3.5rem;
+            }
+            .nav-icon{
+                max-height: 2rem;
+                max-width: 2rem;
+                display: block;
+                margin: auto;
+                padding-bottom: 1rem;
+            }
+            main {
+                margin-left: 5rem;
+            }
+            section {
+                padding-left: 2rem;
+                margin-bottom: 5rem;
+            }
+            .about-right {
+                padding-left: 20vw;
+                background: white;
+                background-image: url("images/bg_orange.png");
+                background-position: center center;
+                background-size: cover;
+            }
+            .name{
+                font-size: 5.5rem;
+                color: #f29420;
+                margin-block-start: 0em;
+                margin-block-end: 0em;
+            }
+            .profession{
+                font-size: 1.5rem;
+                color: #b3b3b3;
+            }
+            .social-icon{
+                max-width: 2.5rem;
+                max-height: 2.5rem;
+            }
+            .text-gray{
+                color: #b3b3b3;
+            }
+            .timeline {
+                margin: 8rem auto;
+                color: black !important;
+                border-left: 2px solid #b3b3b3;
+                border-bottom-right-radius: 4px;
+                border-top-right-radius: 4px;
+                position: relative;
+                line-height: 1.4em;
+                list-style: none;
+                text-align: left;
+                font-weight: 100;
+                max-width: 30%;
+            }
+            .timeline .event {
+                border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+                padding-bottom: 25px;
+                margin-bottom: 50px;
+                position: relative;
+            }
+            .timeline .event:last-of-type {
+                padding-bottom: 0;
+                margin-bottom: 0;
+                border: none;
+            }
+            .timeline .event:before,
+            .timeline .event:after {
+                position: absolute;
+                display: block;
+                top: 0;
+            }
+            .timeline .event:before {
+                left: -217.5px;
+                color: black;
+                content: attr(title);
+                text-align: right;
+                font-weight: 100;
+                font-size: 0.9em;
+                min-width: 120px;
+            }
+            .timeline .event:after {
+                box-shadow: 0 0 0 2px #b3b3b3;
+                left: -3rem;
+                background: orange;
+                border-radius: 50%;
+                height: 0.8rem;
+                width: 0.8rem;
+                top: 0.175rem;
+                content: "";
+            }
+            footer {
+                width: 100%;
+                height: 10rem;
+                background-image: url("images/footer.png");
+                background-size: cover;
+            }
+        .carousel {
+        background: white;
+        margin-top: 5rem;
+        }
+
+        .carousel-cell {
+        width: 70%;
+        height: 200px;
+        /* flex-box, center image in cell */
+        display: -webkit-box;
+        display: -webkit-flex;
+        display:         flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+                justify-content: center;
+        -webkit-align-items: center;
+                align-items: center;
+        }
+
+        .carousel-cell img {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+        /* dim unselected */
+        opacity: 0.7;
+        -webkit-transform: scale(0.85);
+                transform: scale(0.85);
+        -webkit-filter: blur(5px);
+                filter: blur(5px);
+        -webkit-transition: opacity 0.3s, -webkit-transform 0.3s, transform 0.3s, -webkit-filter 0.3s, filter 0.3s;
+                transition: opacity 0.3s, transform 0.3s, filter 0.3s;
+        }
+
+        /* brighten selected image */
+        .carousel-cell.is-selected img {
+        opacity: 1;
+        -webkit-transform: scale(1);
+                transform: scale(1);
+        -webkit-filter: none;
+                filter: none;
+        }
+
+        @media screen and ( min-width: 768px ) {
+        .carousel-cell {
+            height: 400px;
+        }
+        }
+
+        @media screen and ( min-width: 960px ) {
+        .carousel-cell {
+            width: 60%;
+        }
+        }
+
+        /* buttons, no circle */
+        .flickity-prev-next-button {
+        width: 60px;
+        height: 60px;
+        background: transparent;
+        opacity: 0.6;
+        }
+        .flickity-prev-next-button:hover {
+        background: transparent;
+        opacity: 1;
+        }
+        /* arrow color */
+        .flickity-prev-next-button .arrow {
+        fill: white;
+        }
+        .flickity-prev-next-button.no-svg {
+        color: white;
+        }
+        /* closer to edge */
+        .flickity-prev-next-button.previous { left: 0; }
+        .flickity-prev-next-button.next { right: 0; }
+        /* hide disabled button */
+        .flickity-prev-next-button:disabled {
+        display: none;
+        }
+        .loading {
+            overflow: hidden;
+        }
+        .hidden {
+            display: none !important;
+        }
+        </style>
+    </head>
+    <body id="body" class="loading" style="overflow-x: hidden">
+        <div id="intro" class="intro" style="background:white; position: absolute; width: 100%; height: 100%; z-index: 100; overflow: hidden;">
+            <video width="100%" height="100%" autoplay muted>
+                <source src="images/logo-animacao.mp4" type="video/mp4">
+            </video> 
+        </div>
+        <nav class="sidenav">
+            <img src="images/ar_logo.png" alt="logo" style="display: block; width: 65%; margin: 1rem auto">
+            <!-- this is not centered as the logo is pushing it down, using negative margin to push it up -->
+            <div class="sidenav-items"> 
+                <div>
+                    <a href="#about"><img src="images/about.png" alt="about" class="nav-icon"></a>
+                    <a href="#skills"><img src="images/skills.png" alt="skills" class="nav-icon"></a>
+                    <a href="#works"><img src="images/works.png" alt="works" class="nav-icon"></a>
+                    <a href="#story"><img src="images/story.png" alt="story" class="nav-icon"></a>
+                </div>
+            </div>
+        </nav>
+        <main>
+            <section id="about" style="display: flex; height: 100%">
+                <div style="padding: 3rem 0rem 0rem 3rem;">
+                    <h2><u>About</u></h2>
+                    <h3 class="name">Ana <br/>Rodrigues</h3>
+                    <p class="profession">GRAPHIC UX UI WEB DESIGNER</p>
+                    <p>
+                        I’m Ana Rodrigues, a newly graduate, looking to get on the comunication field and use all my frustaded criativity, 
+                        accumulated knowledge and will to work/criate/develop, throught my student life. My goal is simple, to work in comunication, 
+                        branding, publicity, UX and UI design and content criation, through the art of photography or videography. To create is my 
+                        passion and criativity my tool. 
+                    </p>
+                    <div style="display: table;">
+                        <span class="text-gray" style="display: table-cell; vertical-align: middle; padding-right: 1rem;">
+                            Rua dos Rasos lote 6, 3800-065
+                        </span>
+                        <div style="display: table-cell">
+                            <img class="social-icon" src="images/ig.png" alt="Instagram">
+                            <img class="social-icon" src="images/in.png" alt="LinkedIn">
+                            <img class="social-icon" src="images/yt.png" alt="Youtube">
+                        </div>
+                    </div>
+                </div>
+                <div class="about-right">
+                    <p style="padding-right: 16vw; padding-top: 3rem">&nbsp;</p>
+                </div>
+            </section>
+            <section id="skills" style="margin: 5rem 0rem 10rem 3rem;">
+                <h2 >Skills</h2>
+                <div style="display: block; margin: auto; width: 40rem; margin-right: 40%;">
+                    <img style="padding: 1rem; width: 10rem;" src="images/premiere.png" alt="premiere">
+                    <img style="padding: 1rem; width: 10rem;" src="images/lightroom.png" alt="lightroom">
+                    <img style="padding: 1rem; width: 10rem;" src="images/xd.png" alt="xd">
+                    <img style="padding: 1rem; width: 10rem;" src="images/indesign.png" alt="indesign">
+                    <img style="padding: 1rem; width: 10rem;" src="images/illustrator.png" alt="illustrator">
+                    <img style="padding: 1rem; width: 10rem;" src="images/photoshop.png" alt="photoshop">
+                </div>
+            </section>
+            <section id="works" style="margin: 5rem 0rem 10rem 3rem;">
+                <h2>Works</h2>
+                <!-- Flickity HTML init -->
+                <div class="carousel js-flickity">
+
+                    <!-- images from unsplash.com -->
+                    <div class="carousel-cell">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" alt="orange tree" />
+                    </div>
+                    <div class="carousel-cell">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg" alt="submerged" />
+                    </div>
+                    <div class="carousel-cell">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg" alt="look-out" />
+                    </div>
+                    <div class="carousel-cell">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" alt="One World Trade" />
+                    </div>
+                    <div class="carousel-cell">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg" alt="drizzle" />
+                    </div>
+                    <div class="carousel-cell">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg" alt="cat nose" />
+                    </div>
+                    <div class="carousel-cell">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/contrail.jpg" alt="contrail" />
+                    </div>
+                    <div class="carousel-cell">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/golden-hour.jpg" alt="golden hour" />
+                    </div>
+                    <div class="carousel-cell">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/flight-formation.jpg" alt="flight formation" />
+                    </div>
+                </div>
+            </section>
+            <section id="story" style="margin: 5rem 0rem 10rem 3rem;">
+                <h2>Story</h2>
+                <ul class="timeline">
+
+                    <li class="event" title="2014-2017">
+                        <h3>Curso línguistico e humanitário</h3>
+                        <p>From 2014 to 2017 I studied languages and humanities, at José Estêvão’s Highschool.</p>
+                    </li>
+
+                    <li class="event" title="2015">
+                        <h3>Centro Desportivo de São Bernardo</h3>
+                        <p>Since 2015, I've been the sole photographer of all São Bernardo Sports Center games, events and tournaments as well as nacional handball events, like galas and national league finals.</p>    
+                    </li>
+
+                    <li class="event" title="2017 - 2020">
+                        <h3>Universidade de Aveiro</h3>
+                        <p>From 2017 to 2020 i studied New Tecnhologys of Comunication at the University of Aveiro, at a bachelours level.</p>    
+                    </li>
+                    
+                    <li class="event" title="2018 - 2020">
+                        <h3>University of Aveiro' cinema and photogaphy club</h3>
+                        <p>Between '18 and '20, i join the fotografia and cinema club at my university as a center piece in fotographing and organizing major universities events, being headchair in this club.</p>
+                    </li>
+                </ul>
+            </section>
+            <footer></footer>
+        </main>
+        <script src="https://npmcdn.com/flickity@2/dist/flickity.pkgd.js"></script>
+        <script>
+        var body = document.getElementById("body");
+        var intro = document.getElementById("intro");
+        setTimeout(function() {
+            body.classList.remove("loading");
+            intro.classList.add("hidden");
+        }, 7000);
+        </script>
+    </body>
+</html>
